@@ -6,6 +6,7 @@ import fr.cpe.utils.AuthResponse;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 
+// Webservice
 @Path("/WatcherAuth")
 public interface WatcherAuthService {
     @GET

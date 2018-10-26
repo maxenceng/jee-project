@@ -9,6 +9,8 @@ import javax.ejb.EJB;
 import javax.ejb.MessageDriven;
 import javax.jms.*;
 
+// Message driven EJB receiving user in topic,
+// checking its existence in DB then sending the result in the queue
 @MessageDriven(activationConfig = {
         @ActivationConfigProperty(propertyName = "destinationType", propertyValue = "javax.jms.Topic"),
         @ActivationConfigProperty(propertyName = "destination", propertyValue = "java:/tpTopic")

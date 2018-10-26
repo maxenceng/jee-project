@@ -9,6 +9,7 @@ import javax.jms.JMSContext;
 import javax.jms.ObjectMessage;
 import javax.jms.Queue;
 
+// EJB sending user details in the queue
 @Stateless
 public class MessageSenderQueue implements MessageSenderQueueLocal {
     @Inject

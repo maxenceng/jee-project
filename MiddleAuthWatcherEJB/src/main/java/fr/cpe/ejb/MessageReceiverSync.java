@@ -7,12 +7,11 @@ import javax.ejb.Local;
 import javax.ejb.Stateless;
 import javax.inject.Inject;
 import javax.jms.*;
-import java.util.logging.Logger;
 
+// EJB receiving user from the queue
 @Stateless
 @Local
 public class MessageReceiverSync implements MessageReceiverSyncLocal {
-    private final static Logger logger = Logger.getLogger(MessageReceiverSync.class.getName());
 
     @Inject
     JMSContext context;

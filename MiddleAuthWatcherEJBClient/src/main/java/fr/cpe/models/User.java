@@ -2,6 +2,7 @@ package fr.cpe.models;
 
 import javax.persistence.*;
 
+// User model linked to users table in DB
 @Entity
 @Table(name="users")
 @NamedQuery(name = "Users.list", query = "select u from User u")

@@ -2,6 +2,7 @@ package fr.cpe.utils;
 
 import java.util.Objects;
 
+// Contains roles an user can have
 public enum Role {
     ADMIN("ADMIN"), USER("USER"), NONE(null);
 
@@ -19,7 +20,6 @@ public enum Role {
     public static Role getEnumByString(String s) {
         for (Role r : Role.values()) {
             if (Objects.equals(r.role, s)) return r;
-            // if (r.role.equals(s)) return r;
         }
         return null;
     }

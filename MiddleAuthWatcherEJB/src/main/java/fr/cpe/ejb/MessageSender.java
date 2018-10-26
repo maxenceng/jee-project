@@ -10,6 +10,7 @@ import javax.jms.JMSContext;
 import javax.jms.ObjectMessage;
 import javax.jms.Topic;
 
+// EJB sending user in topic
 @Stateless
 @Local
 public class MessageSender implements MessageSenderLocal {
