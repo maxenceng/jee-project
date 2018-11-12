@@ -11,7 +11,7 @@ import javax.ws.rs.core.MediaType;
 public interface WatcherAuthService {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    UserModel get();
+    AuthResponse get();
 
     @POST
     @Consumes(MediaType.APPLICATION_JSON)

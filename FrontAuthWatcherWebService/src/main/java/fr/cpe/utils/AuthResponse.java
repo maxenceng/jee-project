@@ -29,9 +29,9 @@ public class AuthResponse {
         this.role = role;
     }
 
-    public void setAll(String login) {
+    public void setAll(String login, String role) {
         this.validAuth = true;
-        this.role = "ADMIN";
+        this.role = role;
         this.login = login;
     }
 }

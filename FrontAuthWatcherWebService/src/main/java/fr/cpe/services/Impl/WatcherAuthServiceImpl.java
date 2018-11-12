@@ -18,16 +18,18 @@ public class WatcherAuthServiceImpl implements WatcherAuthService {
     MessageReceiverSyncLocal receiver;
 
     @Override
-    public UserModel get() {
+    public AuthResponse get() {
         UserModel user = this.receiver.receiveMessage();
-        return user;
+        AuthResponse authResponse = new AuthResponse();
+        authResponse.setAll(user.getLogin(), user.getRole());
+        return authResponse;
     }
 
     @Override
     public AuthResponse post(UserModel user) {
         this.sender.sendMessage(user);
         AuthResponse authResponse = new AuthResponse();
-        authResponse.setAll(user.getLogin());
+        authResponse.setAll(user.getLogin(), user.getRole());
         return authResponse;
     }
 }
